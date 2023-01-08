@@ -1,30 +1,96 @@
 /** NAVBAR **/
 #navbar {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
   height: 100%;
-  width: 70px;
+  min-height: 560px;
+  width: 14em;
   min-width: 30px;
   background-color: white;
   display: flex;
   flex-direction: column;
   list-style: none;
   border-right: 1px solid lightgray;
+  position: absolute;
+  gap: 1em;
+  box-sizing: border-box;
+  transition: 0.25s;
 }
 
 #navbar img {
-  width: 50px;
+  width: 2em;
+  height: 2em;
+}
+
+#navbar a {
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 15px;
+  width: 100%;
+  align-items: center;
+}
+
+#navbar p {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.navbar-label {
+  margin-left: 15px;
 }
 
 #user-and-settings {
   display: flex;
   flex-direction: column;
   margin-top: auto;
+  margin-bottom: 1em;
 }
 
 .profile-picture-small {
   border-radius: 50%;
+}
+
+.insta-home-div {
+  margin: 25px 0;
+}
+
+#insta-when-big {
+  display: block;
+  font-family: "Oleo Script";
+  font-size: 2.5em;
+}
+
+#insta-when-small {
+  display: none;
+  transform: scale(0.2);
+  transition: 0.5s;
+}
+
+.insta-home-div {
+  height: 2em;
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 1100px) {
+  #navbar {
+    width: 4em;
+  }
+
+  #navbar a {
+    margin: 0 1em 0 0;
+  }
+
+  .navbar-label {
+    display: none;
+  }
+
+  #insta-when-big {
+    display: none;
+  }
+
+  #insta-when-small {
+    display: block;
+    transform: scale(1);
+    transition: 1s;
+  }
 }
 
 /** POSTCARDS **/
@@ -35,6 +101,7 @@
   flex-direction: column;
   width: 50%;
   max-width: 500px;
+  border-radius: 6px;
   /* overflow-x: hidden; */
 }
 
@@ -96,4 +163,35 @@
 
 .caption-username {
   margin: auto 15px;
+}
+
+/** ACTIVE BAR **/
+
+#active-bar {
+  width: 50%;
+  max-width: 500px;
+  background-color: white;
+  padding: 10px;
+  margin-top: 1em;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#active-bar img {
+  border-radius: 50%;
+  height: 75px;
+  /* border: 2px solid ; */
+  border: 2px solid white;
+}
+
+.active-user {
+  background: var(--border-gradient);
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

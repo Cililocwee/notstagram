@@ -1,4 +1,5 @@
 import React from "react";
+import ActiveBar from "../components/ActiveBar";
 import NavBar from "../components/NavBar";
 import PostCard from "../components/PostCard";
 import "./mainFeed.css";
@@ -9,22 +10,24 @@ export default function MainFeed() {
       <NavBar />
 
       <div className="main-feed-container">
+        {" "}
+        <ActiveBar />
         <PostCard
           profilePic="https://picsum.photos/25"
           user="Example User"
-          picUrl="https://picsum.photos/500/200"
+          picUrl="https://picsum.photos/600/300"
           likeCount={5}
         />
         <PostCard
           profilePic="https://picsum.photos/25"
           user="Example User"
-          picUrl="https://picsum.photos/500/200"
+          picUrl="https://picsum.photos/550/300"
           likeCount={5}
         />
         <PostCard
           profilePic="https://picsum.photos/25"
           user="Example User"
-          picUrl="https://picsum.photos/500/200"
+          picUrl="https://picsum.photos/500/300"
           likeCount={5}
         />
       </div>

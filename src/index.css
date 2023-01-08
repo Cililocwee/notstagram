@@ -16,6 +16,7 @@
 
   --background-main: #ededed;
   --not-black: #213547;
+  --border-gradient: linear-gradient(to right, red, purple);
 }
 
 a {
