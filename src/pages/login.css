@@ -1,0 +1,57 @@
+.login-page {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid darkgray;
+  padding: 25px;
+  border-radius: 6px;
+  height: fit-content;
+  background-color: white;
+}
+
+.login-box input {
+  margin-top: 5px;
+}
+
+.login-box h1 {
+  margin: 0 10px 20px;
+  font-family: "Oleo Script", cursive;
+}
+
+.accountless {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid darkgray;
+  padding: 10px;
+  font-size: 0.8em;
+  border-radius: 6px;
+  height: fit-content;
+  margin-top: 25px;
+  background-color: white;
+}
+
+.accountless p {
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+  font-size: 0.8em;
+  border-radius: 6px;
+  height: fit-content;
+  margin-top: 25px;
+}
+
+.app-btn {
+  background-color: var(--not-black);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+}

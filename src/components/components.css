@@ -1,0 +1,77 @@
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: fit-content;
+  min-width: 30px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border-right: 1px solid lightgray;
+}
+
+.postcard {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  overflow: hidden;
+}
+
+.card-user-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height: 3.5em;
+}
+
+.card-user-info-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+}
+
+.card-user-info-right {
+  margin-right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** LIKE/SHARE BAR **/
+
+.like-share-bar {
+  display: flex;
+  list-style: none;
+  width: 100%;
+
+  /* justify-content: space-around; */
+}
+
+.like-share-bar > li:nth-child(-n + 3) {
+  margin: 0 15px;
+}
+
+.save-btn {
+  margin: 0 15px 0 auto;
+}
+
+.like-count {
+  display: flex;
+  margin-left: 20px;
+  font-size: 0.8em;
+  color: var(--not-black);
+}
+
+.caption {
+  display: flex;
+  font-size: 0.8em;
+}
+
+.caption-username {
+  margin: auto 15px;
+}

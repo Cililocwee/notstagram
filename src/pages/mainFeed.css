@@ -1,0 +1,19 @@
+#main-feed {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+
+.main-feed-container {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
