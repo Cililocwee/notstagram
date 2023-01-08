@@ -1,9 +1,10 @@
+/** NAVBAR **/
 #navbar {
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  left: 0;
+  left: 0; */
   height: 100%;
-  width: fit-content;
+  width: 70px;
   min-width: 30px;
   background-color: white;
   display: flex;
@@ -12,12 +13,29 @@
   border-right: 1px solid lightgray;
 }
 
+#navbar img {
+  width: 50px;
+}
+
+#user-and-settings {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.profile-picture-small {
+  border-radius: 50%;
+}
+
+/** POSTCARDS **/
+
 .postcard {
   background-color: white;
   display: flex;
   flex-direction: column;
   width: 50%;
-  overflow: hidden;
+  max-width: 500px;
+  /* overflow-x: hidden; */
 }
 
 .card-user-info {
@@ -40,6 +58,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.centerpiece-photo {
+  overflow: hidden;
 }
 
 /** LIKE/SHARE BAR **/

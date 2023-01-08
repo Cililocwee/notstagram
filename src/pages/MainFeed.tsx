@@ -7,7 +7,7 @@ export default function MainFeed() {
   return (
     <div id="main-feed">
       <NavBar />
-      This is the main feed
+
       <div className="main-feed-container">
         <PostCard
           profilePic="https://picsum.photos/25"
