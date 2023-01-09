@@ -1,5 +1,6 @@
 import React from "react";
 import ActiveBar from "../components/ActiveBar";
+import HeadsUp from "../components/HeadsUp";
 import NavBar from "../components/NavBar";
 import PostCard from "../components/PostCard";
 import "./mainFeed.css";
@@ -31,6 +32,8 @@ export default function MainFeed() {
           likeCount={5}
         />
       </div>
+
+      <HeadsUp userName="corrie_stroup" fullName="Corrie Stroup" />
     </div>
   );
 }

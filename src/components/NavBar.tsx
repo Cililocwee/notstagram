@@ -15,19 +15,19 @@ export default function NavBar() {
     <div id="navbar">
       <div className="insta-home-div">
         <div id="insta-when-big">
-          <a href="">
+          <a href="/#/feed">
             <p>Notstagram</p>
           </a>
         </div>
         <div id="insta-when-small">
-          <a>
+          <a href="/#/feed">
             <img src={InstaBtn} />
             <p className="navbar-label">Label</p>
           </a>
         </div>
       </div>
 
-      <a>
+      <a href="/#/feed">
         <img src={HomeBtn} />
         <p className="navbar-label">Home</p>
       </a>

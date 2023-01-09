@@ -4,14 +4,13 @@
   height: 100%;
   display: flex;
 
-  overflow: auto;
-  display: flex;
+  /* overflow: auto; */
 }
 
 .main-feed-container {
   display: flex;
   flex-direction: column;
-  overflow: auto;
+  /* overflow: auto; */
   align-items: center;
   gap: 15px;
   width: 100%;

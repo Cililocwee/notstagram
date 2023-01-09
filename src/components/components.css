@@ -9,7 +9,7 @@
   flex-direction: column;
   list-style: none;
   border-right: 1px solid lightgray;
-  position: absolute;
+  position: fixed;
   gap: 1em;
   box-sizing: border-box;
   transition: 0.25s;
@@ -198,4 +198,100 @@
 
 .user-bubble {
   font-size: 0.75em;
+}
+
+/** HEADS UP **/
+
+.heads-up {
+  /* border: 1px solid black; */
+  margin-right: auto;
+  height: fit-content;
+  min-height: 25%;
+  position: absolute;
+  right: 8%;
+  top: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.heads-up-user-info {
+  display: flex;
+  align-items: center;
+  width: 250px;
+}
+
+.heads-up-user-info img {
+  border-radius: 50%;
+  width: 60px;
+  margin: 0 15px 0 5px;
+}
+
+.heads-up-user-names {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.heads-up-user-names p {
+  margin: 0;
+  font-size: 0.8em;
+
+  /* color: gray; */
+}
+
+#heads-up-user-full-name {
+  color: gray;
+}
+
+.heads-up-user-names-name {
+  font-weight: bold;
+  color: black;
+  font-size: 0.85em;
+  cursor: pointer;
+}
+
+.suggestions-for-you {
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.suggestions-for-you a {
+  font-size: 0.9em;
+}
+
+.hot-link {
+  color: rgba(0, 133, 250);
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.hot-link:hover {
+  color: var(--not-black);
+  cursor: pointer;
+}
+
+.suggestion-bubble {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.suggestion-highlight {
+  color: gray;
+  font-size: 0.8em;
+}
+
+.suggestion-bubble img {
+  height: 35px;
+  border-radius: 50%;
+  margin: auto 10px auto 0px;
+}
+
+.suggestion-info p {
+  margin: 0;
+  text-align: left;
 }
