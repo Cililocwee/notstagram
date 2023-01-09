@@ -11,6 +11,13 @@ import ShareBtn from "../assets/sharegrad.png";
 import MenuBtn from "../assets/menu.png";
 
 export default function NavBar() {
+  function popUp(): void {
+    const splash: HTMLElement | null =
+      document.getElementById("new-post-splash");
+
+    splash?.classList.add("new-post-active");
+    splash?.classList.remove("new-post-inactive");
+  }
   return (
     <div id="navbar-small-screen">
       <a href="/#/feed">
@@ -31,7 +38,7 @@ export default function NavBar() {
         <p className="navbar-label">Messages</p>
       </a>
 
-      <a>
+      <a onClick={popUp}>
         <img src={NewBtn} />
         <p className="navbar-label">Create</p>
       </a>

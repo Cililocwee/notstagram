@@ -17,6 +17,8 @@
   --background-main: #ededed;
   --not-black: #213547;
   --border-gradient: linear-gradient(to right, red, purple);
+  --nice-blue: rgba(0, 133, 250);
+  --crisp-blue: #405de6;
 }
 
 a {

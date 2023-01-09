@@ -12,9 +12,43 @@ import MenuBtn from "../assets/menu.png";
 
 export default function NavBar() {
   function openSearch(): void {
-    const drawer: HTMLElement | null =
+    const searchDrawer: HTMLElement | null =
       document.getElementById("search-overlay");
-    drawer?.classList.toggle("search-overlay-inactive");
+
+    const notifDrawer: HTMLElement | null = document.getElementById(
+      "notification-overlay"
+    );
+
+    if (notifDrawer?.classList.contains("overlay-active")) {
+      notifDrawer?.classList.toggle("overlay-active");
+      notifDrawer?.classList.toggle("overlay-inactive");
+    }
+
+    searchDrawer?.classList.toggle("overlay-inactive");
+    searchDrawer?.classList.toggle("overlay-active");
+  }
+
+  function openNotifications(): void {
+    const notifDrawer: HTMLElement | null = document.getElementById(
+      "notification-overlay"
+    );
+    const searchDrawer: HTMLElement | null =
+      document.getElementById("search-overlay");
+
+    if (searchDrawer?.classList.contains("overlay-active")) {
+      searchDrawer?.classList.toggle("overlay-active");
+      searchDrawer?.classList.toggle("overlay-inactive");
+    }
+
+    notifDrawer?.classList.toggle("overlay-inactive");
+    notifDrawer?.classList.toggle("overlay-active");
+  }
+
+  function popUp(): void {
+    const splash: HTMLElement = document.getElementById("new-post-splash");
+
+    splash?.classList.add("new-post-active");
+    splash?.classList.remove("new-post-inactive");
   }
 
   return (
@@ -53,11 +87,11 @@ export default function NavBar() {
         <img src={ShareBtn} />
         <p className="navbar-label">Messages</p>
       </a>
-      <a className="hidden-when-small">
+      <a className="hidden-when-small" onClick={openNotifications}>
         <img src={NotificationBtn} />
         <p className="navbar-label">Notifications</p>
       </a>
-      <a>
+      <a onClick={popUp}>
         <img src={NewBtn} />
         <p className="navbar-label">Create</p>
       </a>

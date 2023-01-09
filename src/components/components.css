@@ -48,11 +48,14 @@
   width: 100%;
   align-items: center;
   margin-left: 10px;
+  cursor: pointer;
 }
 
 #navbar-small-screen a {
   display: flex;
+  cursor: pointer;
 }
+#navbar a:hover,
 #navbar-small-screen a:hover {
   transition: 0.5s;
   transform: scale(1.1);
@@ -325,7 +328,7 @@
 }
 
 .hot-link {
-  color: rgba(0, 133, 250);
+  color: var(--nice-blue);
   margin-left: auto;
   font-weight: bold;
   font-size: 0.8em;
@@ -394,6 +397,7 @@
   display: flex;
   width: 300px;
   justify-content: space-between;
+  margin-left: 15px;
 }
 
 .styled-search-bar {
@@ -402,7 +406,10 @@
   background-color: gainsboro;
   padding: 5px 10px;
   border: none;
-  width: 200px;
+  /* width: 200px; */
+  width: 80%;
+  margin: 0 auto;
+  min-width: 200px;
 }
 
 #heart-notifications {
@@ -416,37 +423,87 @@
   }
 }
 
-/** SEARCH OVERLAY **/
+/** OVERLAYS **/
 
-#search-overlay {
+.overlay {
   height: 100vh;
   width: 300px;
   background-color: white;
   border: 1px solid lightgray;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin-left: 3.95em;
   top: -1px;
   border-radius: 0 16px 16px 0;
   transition: 0.25s;
+  text-align: left;
+  padding: 0 15px;
+  box-sizing: border-box;
+
   /* transform: translateX(-100%); */
 }
 
-.search-overlay-inactive {
+.overlay-inactive {
   transform: translateX(-200%);
 }
 
 @media only screen and (min-width: 1050px) {
-  #search-overlay {
+  .overlay {
     margin-left: 13.9em;
   }
 }
 
 @media only screen and (max-width: 675px) {
-  #search-overlay {
+  .overlay {
     display: none;
   }
+}
+
+/** NEW POST **/
+#new-post-splash {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+}
+
+#new-post-box {
+  width: 450px;
+  height: 500px;
+  background-color: white;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#new-post-icon {
+  width: 150px;
+  margin: auto;
+}
+
+#upload-btn {
+  margin-bottom: auto;
+  background-color: var(--nice-blue);
+  color: white;
+  transition: 0.25s;
+}
+
+#upload-btn:hover {
+  background-color: var(--crisp-blue);
+}
+
+.new-post-inactive {
+  display: none;
+}
+
+.new-post-active {
+  display: flex;
 }

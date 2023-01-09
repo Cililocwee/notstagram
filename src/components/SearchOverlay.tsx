@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SearchOverlay() {
   return (
-    <div id="search-overlay" className="search-overlay-inactive">
+    <div id="search-overlay" className="overlay overlay-inactive">
       <h2>Search</h2>
       <input className="styled-search-bar" type="text" placeholder="Search" />
       -------------------
