@@ -5,6 +5,7 @@ import NavBar from "../components/NavBar";
 import NavBarSmall from "../components/NavBarSmall";
 import PostCard from "../components/PostCard";
 import SearchBar from "../components/SearchBar";
+import SearchOverlay from "../components/SearchOverlay";
 import "./mainFeed.css";
 
 export default function MainFeed() {
@@ -13,6 +14,7 @@ export default function MainFeed() {
       <NavBar />
       <NavBarSmall />
       <SearchBar />
+      <SearchOverlay />
 
       <div className="main-feed-container">
         {" "}

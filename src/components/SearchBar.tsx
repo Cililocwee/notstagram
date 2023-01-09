@@ -5,7 +5,7 @@ export default function SearchBar() {
     <div id="search-bar">
       <p>Notstagram</p>
       <div id="search-bar-right">
-        <input placeholder="Search" />
+        <input className="styled-search-bar" placeholder="Search" />
         <img id="heart-notifications" src={Heart} />
       </div>
     </div>

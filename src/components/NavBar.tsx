@@ -11,6 +11,12 @@ import ShareBtn from "../assets/sharegrad.png";
 import MenuBtn from "../assets/menu.png";
 
 export default function NavBar() {
+  function openSearch(): void {
+    const drawer: HTMLElement | null =
+      document.getElementById("search-overlay");
+    drawer?.classList.toggle("search-overlay-inactive");
+  }
+
   return (
     <div id="navbar">
       <div className="insta-home-div">
@@ -31,7 +37,7 @@ export default function NavBar() {
         <img src={HomeBtn} />
         <p className="navbar-label">Home</p>
       </a>
-      <a className="hidden-when-small">
+      <a className="hidden-when-small" onClick={openSearch}>
         <img src={SearchBtn} />
         <p className="navbar-label">Search</p>
       </a>
