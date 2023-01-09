@@ -1,4 +1,5 @@
 import React from "react";
+import PostCardLabel from "./PostCardLabel";
 
 // TODO Expand props later to encompass the comments
 interface Props {
@@ -16,14 +17,8 @@ export default function PostCard({
 }: Props): JSX.Element {
   return (
     <div className="postcard">
-      <div className="card-user-info">
-        <div className="card-user-info-left">
-          <img className="small-profile-picture" src={profilePic} />
-          <p>{user}</p>
-        </div>
+      <PostCardLabel profilePic={profilePic} user={user} />
 
-        <div className="card-user-info-right">...</div>
-      </div>
       <div className="centerpiece-photo">
         <img src={picUrl} alt="" />
       </div>

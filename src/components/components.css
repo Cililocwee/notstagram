@@ -1,3 +1,30 @@
+/** GENERAL STYLES **/
+
+.black-bold-mid-size {
+  font-weight: bold;
+  color: black;
+  font-size: 0.85em;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* #heads-up-user-full-name {
+  color: gray;
+} */
+
+.gray-thin-mid-size {
+  color: gray;
+  font-size: 0.8em;
+  margin: 0;
+}
+
+/* .heads-up-user-names-name {
+  font-weight: bold;
+  color: black;
+  font-size: 0.85em;
+  cursor: pointer;
+} */
+
 /** NAVBAR **/
 #navbar {
   height: 100%;
@@ -165,9 +192,15 @@
   /* overflow-x: hidden; */
 }
 
+.centerpiece-photo {
+  overflow: hidden;
+}
+
+/** POST CARD LABEL **/
+
 .card-user-info {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 100%;
   align-items: center;
   height: 3.5em;
@@ -177,18 +210,27 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 200px;
+  justify-content: center;
+  width: fit-content;
+  padding: 15px;
+}
+
+.card-user-info-left img {
+  margin: 0;
+}
+
+.card-user-info-middle {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .card-user-info-right {
   margin-right: 25px;
+  margin-left: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.centerpiece-photo {
-  overflow: hidden;
 }
 
 /** LIKE/SHARE BAR **/
@@ -300,19 +342,6 @@
 .heads-up-user-names p {
   margin: 0;
   font-size: 0.8em;
-
-  /* color: gray; */
-}
-
-#heads-up-user-full-name {
-  color: gray;
-}
-
-.heads-up-user-names-name {
-  font-weight: bold;
-  color: black;
-  font-size: 0.85em;
-  cursor: pointer;
 }
 
 .suggestions-for-you {
@@ -342,11 +371,6 @@
 .suggestion-bubble {
   display: flex;
   margin-bottom: 5px;
-}
-
-.suggestion-highlight {
-  color: gray;
-  font-size: 0.8em;
 }
 
 .small-profile-picture {

@@ -45,7 +45,8 @@ export default function NavBar() {
   }
 
   function popUp(): void {
-    const splash: HTMLElement = document.getElementById("new-post-splash");
+    const splash: HTMLElement | null =
+      document.getElementById("new-post-splash");
 
     splash?.classList.add("new-post-active");
     splash?.classList.remove("new-post-inactive");

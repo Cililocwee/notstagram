@@ -13,7 +13,9 @@ export default function HeadsUp({ userName, fullName, suggestions }: Props) {
       <div className="heads-up-user-info">
         <img src="https://picsum.photos/75" />
         <div className="heads-up-user-names">
-          <p className="heads-up-user-names-name">{userName}</p>
+          <p className="heads-up-user-names-name black-bold-mid-size">
+            {userName}
+          </p>
           <p id="heads-up-user-full-name">{fullName}</p>
         </div>
         <p className="hot-link">Switch</p>
