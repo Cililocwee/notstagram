@@ -181,17 +181,21 @@
 
 #active-bar img {
   border-radius: 50%;
-  height: 75px;
+  height: 55px;
   /* border: 2px solid ; */
   border: 2px solid white;
 }
 
 .active-user {
   background: var(--border-gradient);
-  height: 85px;
-  width: 85px;
+  height: 64px;
+  width: 64px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.user-bubble {
+  font-size: 0.75em;
 }
