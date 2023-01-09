@@ -2,6 +2,7 @@ import React from "react";
 import ActiveBar from "../components/ActiveBar";
 import HeadsUp from "../components/HeadsUp";
 import NavBar from "../components/NavBar";
+import NavBarSmall from "../components/NavBarSmall";
 import PostCard from "../components/PostCard";
 import "./mainFeed.css";
 
@@ -9,6 +10,7 @@ export default function MainFeed() {
   return (
     <div id="main-feed">
       <NavBar />
+      <NavBarSmall />
 
       <div className="main-feed-container">
         {" "}

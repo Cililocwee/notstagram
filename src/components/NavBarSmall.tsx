@@ -12,29 +12,12 @@ import MenuBtn from "../assets/menu.png";
 
 export default function NavBar() {
   return (
-    <div id="navbar">
-      <div className="insta-home-div">
-        <div id="insta-when-big">
-          <a className="hidden-when-small" href="/#/feed">
-            <p>Notstagram</p>
-          </a>
-        </div>
-        <div id="insta-when-small">
-          <a className="hidden-when-small" href="/#/feed">
-            <img src={InstaBtn} />
-            <p className="navbar-label">Label</p>
-          </a>
-        </div>
-      </div>
-
+    <div id="navbar-small-screen">
       <a href="/#/feed">
         <img src={HomeBtn} />
         <p className="navbar-label">Home</p>
       </a>
-      <a className="hidden-when-small">
-        <img src={SearchBtn} />
-        <p className="navbar-label">Search</p>
-      </a>
+
       <a>
         <img src={DiscoverBtn} />
         <p className="navbar-label">Explore</p>
@@ -47,10 +30,7 @@ export default function NavBar() {
         <img src={ShareBtn} />
         <p className="navbar-label">Messages</p>
       </a>
-      <a className="hidden-when-small">
-        <img src={NotificationBtn} />
-        <p className="navbar-label">Notifications</p>
-      </a>
+
       <a>
         <img src={NewBtn} />
         <p className="navbar-label">Create</p>
@@ -59,12 +39,6 @@ export default function NavBar() {
         <img className="profile-picture-small" src="https://picsum.photos/50" />{" "}
         <p className="navbar-label">Profile</p>
       </a>
-      <div className="hidden-when-small" id="user-and-settings">
-        <a>
-          <img src={MenuBtn} />
-          <p className="navbar-label">More</p>
-        </a>
-      </div>
     </div>
   );
 }

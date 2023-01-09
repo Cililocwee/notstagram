@@ -9,7 +9,7 @@ interface Props {
 
 export default function HeadsUp({ userName, fullName, suggestions }: Props) {
   return (
-    <div className="heads-up">
+    <div id="heads-up">
       <div className="heads-up-user-info">
         <img src="https://picsum.photos/75" />
         <div className="heads-up-user-names">

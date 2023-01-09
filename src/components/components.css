@@ -15,7 +15,26 @@
   transition: 0.25s;
 }
 
-#navbar img {
+#navbar-small-screen {
+  min-width: 30px;
+  background-color: white;
+  display: none;
+  list-style: none;
+  border-top: 1px solid lightgray;
+  position: fixed;
+  box-sizing: border-box;
+  transition: 0.25s;
+  height: 3em;
+  width: 100%;
+  min-height: 3em;
+  bottom: 0;
+  flex-direction: row;
+  gap: 0;
+  justify-content: space-around;
+}
+
+#navbar img,
+#navbar-small-screen img {
   width: 2em;
   height: 2em;
 }
@@ -69,7 +88,7 @@
   transition: 0.5s;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1050px) {
   #navbar {
     width: 4em;
   }
@@ -93,15 +112,42 @@
   }
 }
 
+@media only screen and (max-width: 675px) {
+  #navbar {
+    display: none;
+  }
+
+  #navbar-small-screen {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .insta-home-div,
+  #navbar > .hidden-when-small {
+    display: none;
+    visibility: hidden;
+  }
+
+  #user-and-settings {
+    margin: auto;
+  }
+}
+
 /** POSTCARDS **/
 
 .postcard {
   background-color: white;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   max-width: 500px;
+  min-width: 500px;
+  flex-grow: 1;
+  flex-shrink: 1;
   border-radius: 6px;
+  border: 1px solid lightgray;
+
   /* overflow-x: hidden; */
 }
 
@@ -168,8 +214,11 @@
 /** ACTIVE BAR **/
 
 #active-bar {
-  width: 50%;
+  width: 100%;
   max-width: 500px;
+  min-width: 500px;
+  flex-grow: 1;
+  flex-shrink: 1;
   background-color: white;
   padding: 10px;
   margin-top: 1em;
@@ -177,6 +226,7 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-evenly;
+  border: 1px solid lightgray;
 }
 
 #active-bar img {
@@ -202,17 +252,16 @@
 
 /** HEADS UP **/
 
-.heads-up {
-  /* border: 1px solid black; */
+#heads-up {
   margin-right: auto;
+  margin-left: 15px;
+  margin-top: 25px;
   height: fit-content;
   min-height: 25%;
-  position: absolute;
-  right: 8%;
-  top: 15px;
   padding: 10px;
   display: flex;
   flex-direction: column;
+  width: 250px;
 }
 
 .heads-up-user-info {
@@ -294,4 +343,10 @@
 .suggestion-info p {
   margin: 0;
   text-align: left;
+}
+
+@media only screen and (max-width: 1000px) {
+  #heads-up {
+    display: none;
+  }
 }

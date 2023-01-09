@@ -2,7 +2,9 @@
   position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
 
   /* overflow: auto; */
 }
@@ -10,8 +12,22 @@
 .main-feed-container {
   display: flex;
   flex-direction: column;
+  grid-column: 2;
   /* overflow: auto; */
   align-items: center;
   gap: 15px;
   width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+  #main-feed {
+    grid-template-columns: 1fr 500px 1fr;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .main-feed-container {
+    width: auto;
+    margin: auto;
+  }
 }
