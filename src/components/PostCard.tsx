@@ -18,7 +18,7 @@ export default function PostCard({
     <div className="postcard">
       <div className="card-user-info">
         <div className="card-user-info-left">
-          <img src={profilePic} />
+          <img className="small-profile-picture" src={profilePic} />
           <p>{user}</p>
         </div>
 

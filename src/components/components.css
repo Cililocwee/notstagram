@@ -24,13 +24,14 @@
   position: fixed;
   box-sizing: border-box;
   transition: 0.25s;
-  height: 3em;
+  height: 4em;
   width: 100%;
   min-height: 3em;
   bottom: 0;
   flex-direction: row;
   gap: 0;
   justify-content: space-around;
+  align-items: center;
 }
 
 #navbar img,
@@ -45,6 +46,15 @@
   padding-left: 15px;
   width: 100%;
   align-items: center;
+  margin-left: 10px;
+}
+
+#navbar-small-screen a {
+  display: flex;
+}
+#navbar-small-screen a:hover {
+  transition: 0.5s;
+  transform: scale(1.1);
 }
 
 #navbar p {
@@ -244,6 +254,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .user-bubble {
@@ -334,11 +345,16 @@
   font-size: 0.8em;
 }
 
-.suggestion-bubble img {
+.small-profile-picture {
   height: 35px;
   border-radius: 50%;
   margin: auto 10px auto 0px;
 }
+/* .suggestion-bubble img {
+  height: 35px;
+  border-radius: 50%;
+  margin: auto 10px auto 0px;
+} */
 
 .suggestion-info p {
   margin: 0;
@@ -348,5 +364,54 @@
 @media only screen and (max-width: 1000px) {
   #heads-up {
     display: none;
+  }
+}
+
+/** SEARCH BAR **/
+#search-bar {
+  background-color: white;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4em;
+  border-bottom: 1px solid lightgray;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+#search-bar p {
+  font-family: "Oleo Script";
+  font-size: 2em;
+}
+
+#search-bar-right {
+  /* background-color: blue; */
+  box-sizing: border-box;
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+}
+
+#search-bar-right input {
+  height: 1.75em;
+  /* margin: auto; */
+  border-radius: 6px;
+  background-color: gainsboro;
+  padding: 5px 10px;
+  border: none;
+  width: 200px;
+}
+
+#heart-notifications {
+  width: 30px;
+  height: 30px;
+}
+
+@media only screen and (max-width: 675px) {
+  #search-bar {
+    display: flex;
   }
 }

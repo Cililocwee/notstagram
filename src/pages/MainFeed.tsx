@@ -4,6 +4,7 @@ import HeadsUp from "../components/HeadsUp";
 import NavBar from "../components/NavBar";
 import NavBarSmall from "../components/NavBarSmall";
 import PostCard from "../components/PostCard";
+import SearchBar from "../components/SearchBar";
 import "./mainFeed.css";
 
 export default function MainFeed() {
@@ -11,6 +12,7 @@ export default function MainFeed() {
     <div id="main-feed">
       <NavBar />
       <NavBarSmall />
+      <SearchBar />
 
       <div className="main-feed-container">
         {" "}

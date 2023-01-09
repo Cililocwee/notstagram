@@ -13,7 +13,7 @@ export default function SuggestionBubble({
 }: Props): JSX.Element {
   return (
     <div className="suggestion-bubble">
-      <img src={picUrl} />
+      <img className="small-profile-picture" src={picUrl} />
       <div className="suggestion-info">
         <p className="heads-up-user-names-name">{userName}</p>
         <p className="suggestion-highlight">{suggestionHighlight}</p>

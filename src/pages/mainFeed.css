@@ -2,11 +2,8 @@
   position: relative;
   width: 100%;
   height: 100%;
-  /* display: flex; */
   display: grid;
   grid-template-columns: 1fr 500px 1fr;
-
-  /* overflow: auto; */
 }
 
 .main-feed-container {
@@ -28,6 +25,6 @@
 @media only screen and (max-width: 675px) {
   .main-feed-container {
     width: auto;
-    margin: auto;
+    margin: 60px auto auto auto;
   }
 }
