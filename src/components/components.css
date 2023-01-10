@@ -175,9 +175,9 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 98%;
   max-width: 500px;
-  min-width: 500px;
+  /* min-width: 500px; */
   flex-grow: 1;
   flex-shrink: 1;
   border-radius: 6px;
@@ -188,6 +188,10 @@
 
 .centerpiece-photo {
   overflow: hidden;
+}
+
+.centerpiece-photo img {
+  width: 100%;
 }
 
 /** POST CARD LABEL **/
@@ -264,9 +268,8 @@
 /** ACTIVE BAR **/
 
 #active-bar {
-  width: 100%;
+  width: 98%;
   max-width: 500px;
-  min-width: 500px;
   flex-grow: 1;
   flex-shrink: 1;
   background-color: white;
@@ -372,11 +375,6 @@
   border-radius: 50%;
   margin: auto 10px auto 0px;
 }
-/* .suggestion-bubble img {
-  height: 35px;
-  border-radius: 50%;
-  margin: auto 10px auto 0px;
-} */
 
 .suggestion-info p {
   margin: 0;
@@ -410,7 +408,6 @@
 }
 
 #search-bar-right {
-  /* background-color: blue; */
   box-sizing: border-box;
   display: flex;
   width: 300px;
@@ -424,7 +421,6 @@
   background-color: gainsboro;
   padding: 5px 10px;
   border: none;
-  /* width: 200px; */
   width: 80%;
   margin: 0 auto;
   min-width: 200px;

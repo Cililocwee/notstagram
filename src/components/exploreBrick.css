@@ -1,0 +1,52 @@
+/** CSS FLEX **/
+
+.row {
+  display: flex;
+
+  width: 75%;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.column,
+.column-big {
+  flex: 30%;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-big img {
+  height: 100%;
+}
+
+.column img,
+.column-big img {
+  /* margin-top: 8px; */
+  vertical-align: middle;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* When screen is bigger than 1050 */
+@media only screen and (min-width: 1050px) {
+  .explore-page-container {
+    margin-left: 14em;
+  }
+}
+
+/* When the screen is smaller than 1050*/
+@media only screen and (max-width: 1050px) {
+  .explore-page-container {
+    margin-left: 4em;
+  }
+}
+/* When the screen is smaller than 675*/
+@media only screen and (max-width: 675px) {
+  .explore-page-container {
+    margin-left: 0;
+    margin-top: 4em;
+  }
+}

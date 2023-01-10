@@ -1,6 +1,5 @@
 /** GENERAL PAGE FORMAT **/
 #main-feed,
-#explore-page,
 #reels-page,
 #inbox,
 #profile-page {
@@ -11,28 +10,53 @@
   grid-template-columns: 1fr 500px 1fr;
 }
 
-/** MAIN FEED **/
-.main-feed-container {
-  display: flex;
-  flex-direction: column;
-  grid-column: 2;
-  /* overflow: auto; */
-  align-items: center;
-  gap: 15px;
-  width: 100%;
-}
-
 @media only screen and (max-width: 1000px) {
-  #main-feed {
+  #main-feed,
+  #reels-page,
+  #inbox,
+  #profile-page {
     grid-template-columns: 1fr 500px 1fr;
   }
 }
 
+/** MAIN FEED **/
+.main-feed-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 2;
+  align-items: center;
+  gap: 15px;
+  width: 95%;
+}
+
 @media only screen and (max-width: 675px) {
   .main-feed-container {
-    width: auto;
+    grid-template-columns: 500px;
     margin: 60px auto auto auto;
   }
 }
 
 /** EXPLORE **/
+
+#explore-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.explore-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* When screen is smaller than 675 */
+@media only screen and (max-width: 675px) {
+}
+
+/* When screen is bigger than 675 */
+@media only screen and (min-width: 675px) {
+}
