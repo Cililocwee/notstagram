@@ -164,12 +164,6 @@
     align-items: center;
   }
 
-  .insta-home-div,
-  #navbar > .hidden-when-small {
-    display: none;
-    visibility: hidden;
-  }
-
   #user-and-settings {
     margin: auto;
   }

@@ -7,7 +7,7 @@ import PostCard from "../components/PostCard";
 import SearchBar from "../components/SearchBar";
 import SearchOverlay from "../components/SearchOverlay";
 import NotificationOverlay from "../components/NotificationOverlay";
-import "./mainFeed.css";
+import "./pages.css";
 import NewPost from "../components/NewPost";
 
 export default function MainFeed() {

@@ -9,6 +9,7 @@ import ReelBtn from "../assets/reelgrad.png";
 import SearchBtn from "../assets/searchgrad.png";
 import ShareBtn from "../assets/sharegrad.png";
 import MenuBtn from "../assets/menu.png";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   function openSearch(): void {
@@ -76,31 +77,34 @@ export default function NavBar() {
         <img src={SearchBtn} />
         <p className="navbar-label">Search</p>
       </a>
-      <a>
+      <Link to="/explore">
         <img src={DiscoverBtn} />
         <p className="navbar-label">Explore</p>
-      </a>
-      <a>
+      </Link>
+      <Link to="/reels">
         <img src={ReelBtn} />
         <p className="navbar-label">Reels</p>
-      </a>
-      <a>
+      </Link>
+      <Link to="/inbox">
         <img src={ShareBtn} />
         <p className="navbar-label">Messages</p>
-      </a>
-      <a className="hidden-when-small" onClick={openNotifications}>
+      </Link>
+
+      <a onClick={openNotifications}>
         <img src={NotificationBtn} />
         <p className="navbar-label">Notifications</p>
       </a>
+
       <a onClick={popUp}>
         <img src={NewBtn} />
         <p className="navbar-label">Create</p>
       </a>
-      <a>
+      <Link to="/profile">
         <img className="profile-picture-small" src="https://picsum.photos/50" />{" "}
         <p className="navbar-label">Profile</p>
-      </a>
-      <div className="hidden-when-small" id="user-and-settings">
+      </Link>
+
+      <div id="user-and-settings">
         <a>
           <img src={MenuBtn} />
           <p className="navbar-label">More</p>
