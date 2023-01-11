@@ -231,6 +231,10 @@
   align-items: center;
 }
 
+.caption-content {
+  text-align: left;
+}
+
 /** LIKE/SHARE BAR **/
 
 .like-share-bar {

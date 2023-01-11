@@ -7,6 +7,7 @@ interface Props {
   user: string;
   picUrl: string;
   likeCount: number;
+  caption: string;
 }
 
 export default function PostCard({
@@ -14,6 +15,7 @@ export default function PostCard({
   user,
   picUrl,
   likeCount,
+  caption,
 }: Props): JSX.Element {
   return (
     <div className="postcard">
@@ -33,8 +35,10 @@ export default function PostCard({
       </div>
       {/* This needs to eventually be its own component function */}
       <div className="caption">
-        <p className="caption-username">Example User</p>
-        <p className="caption-content">Lorem ipsum dolor et...</p>
+        <p className="caption-username">
+          <strong>{user}</strong>
+        </p>
+        <p className="caption-content">{caption}</p>
       </div>
     </div>
   );
