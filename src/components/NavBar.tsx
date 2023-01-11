@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./components.css";
 import DiscoverBtn from "../assets/discovergrad.png";
 import HomeBtn from "../assets/homecute.png";
@@ -10,8 +10,11 @@ import SearchBtn from "../assets/searchgrad.png";
 import ShareBtn from "../assets/sharegrad.png";
 import MenuBtn from "../assets/menu.png";
 import { Link } from "react-router-dom";
+import { AppContext } from "../AppContext";
 
 export default function NavBar() {
+  const currentContext: any = useContext(AppContext);
+  const { currentUser } = currentContext;
   function openSearch(): void {
     const searchDrawer: HTMLElement | null =
       document.getElementById("search-overlay");
@@ -100,7 +103,7 @@ export default function NavBar() {
         <p className="navbar-label">Create</p>
       </a>
       <Link to="/profile">
-        <img className="profile-picture-small" src="https://picsum.photos/50" />{" "}
+        <img className="profile-picture-small" src={currentUser.pic_url} />
         <p className="navbar-label">Profile</p>
       </Link>
 

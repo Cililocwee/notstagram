@@ -13,7 +13,7 @@ import { AppContext } from "../AppContext";
 
 export default function MainFeed() {
   const currentContext: any = useContext(AppContext);
-  const { users, posts, fetchUserDatabase, fetchPostsDatabase } =
+  const { currentUser, users, posts, fetchUserDatabase, fetchPostsDatabase } =
     currentContext;
 
   function handleClick(): void {
@@ -40,7 +40,7 @@ export default function MainFeed() {
     id: string;
     pic_url: string;
     poster: string;
-    time_posted: object;
+    time_posted: string;
   }
 
   return (
@@ -53,12 +53,8 @@ export default function MainFeed() {
       <NewPost />
 
       <div className="main-feed-container">
-        <button onClick={handleClick}>Test</button>
+        {/* <button onClick={handleClick}>Test</button> */}
         <ActiveBar />
-        {/* {users?.map((x: NotstaUser) => (
-          <p>{x.user_id}</p>
-        ))} */}
-
         {posts?.map((x: NotstaPost) => (
           <PostCard
             profilePic="https://picsum.photos/25"
@@ -66,66 +62,16 @@ export default function MainFeed() {
             picUrl={x.pic_url}
             likeCount={5}
             caption={x.comment}
+            time_posted="recently"
           />
         ))}
-
-        {/* <PostCard
-          profilePic="https://picsum.photos/25"
-          user="Example User"
-          picUrl="https://picsum.photos/600/300"
-          likeCount={5}
-        />
-        <PostCard
-          profilePic="https://picsum.photos/26"
-          user="Example User"
-          picUrl="https://picsum.photos/550/301"
-          likeCount={5}
-        />
-        <PostCard
-          profilePic="https://picsum.photos/27"
-          user="Example User"
-          picUrl="https://picsum.photos/500/302"
-          likeCount={5}
-        />
-        <PostCard
-          profilePic="https://picsum.photos/28"
-          user="Example User"
-          picUrl="https://picsum.photos/500/303"
-          likeCount={5}
-        />
-        <PostCard
-          profilePic="https://picsum.photos/29"
-          user="Example User"
-          picUrl="https://picsum.photos/500/304"
-          likeCount={5}
-        />
-        <PostCard
-          profilePic="https://picsum.photos/30"
-          user="Example User"
-          picUrl="https://picsum.photos/500/305"
-          likeCount={5}
-        />
-        <PostCard
-          profilePic="https://picsum.photos/31"
-          user="Example User"
-          picUrl="https://picsum.photos/500/306"
-          likeCount={5}
-        />
-        <PostCard
-          profilePic="https://picsum.photos/32"
-          user="Example User"
-          picUrl="https://picsum.photos/500/307"
-          likeCount={5}
-        />
-        <PostCard
-          profilePic="https://picsum.photos/33"
-          user="Example User"
-          picUrl="https://picsum.photos/500/308"
-          likeCount={5}
-        /> */}
       </div>
 
-      <HeadsUp userName="corrie_stroup" fullName="Corrie Stroup" />
+      <HeadsUp
+        userName={currentUser.username}
+        fullName={currentUser.full_name}
+        pic_url={currentUser.pic_url}
+      />
     </div>
   );
 }

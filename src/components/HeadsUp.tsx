@@ -4,14 +4,20 @@ import SuggestionBubble from "./SuggestionBubble";
 interface Props {
   userName: string;
   fullName: string;
+  pic_url?: string;
   suggestions?: JSX.Element[];
 }
 
-export default function HeadsUp({ userName, fullName, suggestions }: Props) {
+export default function HeadsUp({
+  userName,
+  fullName,
+  suggestions,
+  pic_url,
+}: Props) {
   return (
     <div id="heads-up">
       <div className="heads-up-user-info">
-        <img src="https://picsum.photos/75" />
+        <img src={pic_url} />
         <div className="heads-up-user-names">
           <p className="heads-up-user-names-name black-bold-mid-size">
             {userName}

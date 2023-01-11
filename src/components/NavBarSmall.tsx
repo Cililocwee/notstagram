@@ -1,16 +1,16 @@
-import React from "react";
+import { useContext } from "react";
 import "./components.css";
 import DiscoverBtn from "../assets/discovergrad.png";
 import HomeBtn from "../assets/homecute.png";
-import InstaBtn from "../assets/instagramalt.png";
 import NewBtn from "../assets/newgrad.png";
-import NotificationBtn from "../assets/notificationgrad.png";
 import ReelBtn from "../assets/reelgrad.png";
-import SearchBtn from "../assets/searchgrad.png";
 import ShareBtn from "../assets/sharegrad.png";
-import MenuBtn from "../assets/menu.png";
+import { AppContext } from "../AppContext";
 
 export default function NavBar() {
+  const currentContext: any = useContext(AppContext);
+  const { currentUser } = currentContext;
+
   function popUp(): void {
     const splash: HTMLElement | null =
       document.getElementById("new-post-splash");
@@ -43,7 +43,7 @@ export default function NavBar() {
         <p className="navbar-label">Create</p>
       </a>
       <a>
-        <img className="profile-picture-small" src="https://picsum.photos/50" />{" "}
+        <img className="profile-picture-small" src={currentUser.pic_url} />
         <p className="navbar-label">Profile</p>
       </a>
     </div>

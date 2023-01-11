@@ -8,6 +8,7 @@ interface Props {
   picUrl: string;
   likeCount: number;
   caption: string;
+  time_posted?: string;
 }
 
 export default function PostCard({
@@ -16,13 +17,14 @@ export default function PostCard({
   picUrl,
   likeCount,
   caption,
+  time_posted,
 }: Props): JSX.Element {
   return (
     <div className="postcard">
       <PostCardLabel profilePic={profilePic} user={user} />
 
       <div className="centerpiece-photo">
-        <img src={picUrl} alt="" />
+        <img loading="lazy" src={picUrl} alt="" />
       </div>
       <div className="friend-interactions">
         <div className="like-share-bar">

@@ -16,6 +16,17 @@ interface Props {
 export const AppContextProvider = ({ children }: Props) => {
   const [users, setUsers] = useState<any>();
   const [posts, setPosts] = useState<any>();
+  const [currentUser, setCurrentUser] = useState<CurrentUser>({
+    username: "dev_user",
+    pic_url: "https://picsum.photos/25",
+    full_name: "Devon Userton",
+  });
+
+  interface CurrentUser {
+    username: string;
+    pic_url: string;
+    full_name: string;
+  }
 
   async function fetchUserDatabase() {
     await getDocs(collection(db, "users")).then((querySnapshot) => {
@@ -24,7 +35,7 @@ export const AppContextProvider = ({ children }: Props) => {
         id: doc.id,
       }));
       setUsers(newData);
-      console.log(newData);
+      // console.log(newData);
     });
   }
 
@@ -46,6 +57,7 @@ export const AppContextProvider = ({ children }: Props) => {
     posts,
     fetchUserDatabase,
     fetchPostsDatabase,
+    currentUser,
   };
 
   return (
