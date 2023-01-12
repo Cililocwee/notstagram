@@ -27,7 +27,7 @@ export default function LogIn() {
           </p>
         </div>
         <p>Get the app</p>
-        <div className="app-container">
+        <div className="appstore-container">
           <div className="app-btn">Apple App Store</div>
           <div className="app-btn">Google Play Store</div>
         </div>

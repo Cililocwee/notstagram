@@ -26,6 +26,7 @@ export default function MainFeed() {
     handleClick();
   }, []);
 
+  // ** Unimplemented
   interface NotstaUser {
     email: string;
     first_name: string;
@@ -40,7 +41,12 @@ export default function MainFeed() {
     id: string;
     pic_url: string;
     poster: string;
-    time_posted: string;
+    time_posted: TimePosted;
+  }
+
+  interface TimePosted {
+    seconds: number;
+    nanoseconds: number;
   }
 
   return (
@@ -62,7 +68,7 @@ export default function MainFeed() {
             picUrl={x.pic_url}
             likeCount={5}
             caption={x.comment}
-            time_posted="recently"
+            time_posted={x.time_posted.seconds}
           />
         ))}
       </div>

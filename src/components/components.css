@@ -483,13 +483,20 @@
 /** NEW POST **/
 #new-post-splash {
   background-color: rgba(0, 0, 0, 0.7);
-  height: 100vh;
+  /* height: 100vh; */
+  height: 100%;
   width: 100%;
   /* display: flex; */
   justify-content: center;
   align-items: center;
   position: fixed;
   z-index: 999;
+}
+
+@media only screen and (max-width: 675px) {
+  #new-post-splash {
+    height: 100%;
+  }
 }
 
 #new-post-box {
