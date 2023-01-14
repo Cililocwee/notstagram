@@ -37,10 +37,18 @@ export default function PostCard({
       </div>
       <div className="friend-interactions">
         <div className="like-share-bar">
-          <li>Like</li>
-          <li>Comment</li>
-          <li>Share</li>
-          <li className="save-btn">Save</li>
+          <li>
+            <img src={LikeIcon} />
+          </li>
+          <li>
+            <img src={CommentIcon} />
+          </li>
+          <li>
+            <img src={ShareIcon} />
+          </li>
+          <li className="save-btn">
+            <img src={BookmarkIcon} />
+          </li>
         </div>
         <div className="like-count">{likeCount} likes</div>
       </div>

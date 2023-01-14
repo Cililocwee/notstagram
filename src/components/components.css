@@ -241,8 +241,14 @@
   display: flex;
   list-style: none;
   width: 100%;
+}
 
-  /* justify-content: space-around; */
+.like-share-bar img {
+  width: 25px;
+}
+
+.like-share-bar img:hover {
+  filter: invert(50%);
 }
 
 .like-share-bar > li:nth-child(-n + 3) {
