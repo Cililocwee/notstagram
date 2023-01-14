@@ -15,7 +15,7 @@ export default function ProfilePage() {
       <SearchOverlay />
       <NotificationOverlay />
       <NewPost />
-      This is a user profile page
+      <p className="in-progress">This feature is not yet functional</p>
     </div>
   );
 }

@@ -84,11 +84,13 @@ export default function NavBar() {
         <img src={DiscoverBtn} />
         <p className="navbar-label">Explore</p>
       </Link>
-      <Link to="/reels">
+      <Link to="/feed">
+        {/* <Link to="/reels"> */}
         <img src={ReelBtn} />
         <p className="navbar-label">Reels</p>
       </Link>
-      <Link to="/inbox">
+      <Link to="/feed">
+        {/* <Link to="/inbox"> */}
         <img src={ShareBtn} />
         <p className="navbar-label">Messages</p>
       </Link>
@@ -102,7 +104,8 @@ export default function NavBar() {
         <img src={NewBtn} />
         <p className="navbar-label">Create</p>
       </a>
-      <Link to="/profile">
+      <Link to="/feed">
+        {/* <Link to="/profile"> */}
         <img className="profile-picture-small" src={currentUser.pic_url} />
         <p className="navbar-label">Profile</p>
       </Link>

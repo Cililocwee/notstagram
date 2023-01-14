@@ -15,7 +15,7 @@ export default function Inbox() {
       <SearchOverlay />
       <NotificationOverlay />
       <NewPost />
-      This is the user's inbox
+      <p className="in-progress">This feature is not yet functional</p>
     </div>
   );
 }

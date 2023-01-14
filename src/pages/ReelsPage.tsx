@@ -15,7 +15,7 @@ export default function ReelsPage() {
       <SearchOverlay />
       <NotificationOverlay />
       <NewPost />
-      This is a page for users to watch videos
+      <p className="in-progress">This feature is not yet functional</p>
     </div>
   );
 }

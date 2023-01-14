@@ -5,9 +5,9 @@ export default function SearchOverlay() {
     <div id="search-overlay" className="overlay overlay-inactive">
       <h2>Search</h2>
       <input className="styled-search-bar" type="text" placeholder="Search" />
-      -------------------
       <h4>Recent</h4>
       <p>No recent searches.</p>
+      <p className="in-progress">This feature is not yet functional</p>
     </div>
   );
 }

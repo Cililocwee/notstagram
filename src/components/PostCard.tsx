@@ -6,7 +6,7 @@ import ShareIcon from "../assets/sharegrad.png";
 import BookmarkIcon from "../assets/bookmark.png";
 import { uuidv4 } from "@firebase/util";
 
-// TODO Expand props later to encompass the comments
+// TODO Upload pictures to Firestore and add pic_url from there to Firebase
 
 interface Props {
   profilePic: string;

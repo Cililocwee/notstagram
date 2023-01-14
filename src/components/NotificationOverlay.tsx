@@ -12,11 +12,12 @@ export default function NotificationOverlay() {
       </div>
       -------------------
       <h4>This Month</h4>
-      {/* Turn this into a component */}
+      {/* TODO Turn this into a component */}
       <div className="notification-bubble">
         <span style={{ fontWeight: "bold" }}>fran_fran24</span> mentioned you in
         a comment: lorem ipsum dolor et ...
       </div>
+      <p className="in-progress">This feature is not yet functional</p>
     </div>
   );
 }

@@ -10,6 +10,12 @@
   grid-template-columns: 1fr 500px 1fr;
 }
 
+#profile-page,
+#inbox,
+#reels-page {
+  display: flex;
+}
+
 @media only screen and (max-width: 1000px) {
   #main-feed,
   #reels-page,
