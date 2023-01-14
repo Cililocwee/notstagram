@@ -1,11 +1,6 @@
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "./firebase";
-import React, {
-  useState,
-  createContext,
-  useEffect,
-  ProviderProps,
-} from "react";
+import { useState, createContext } from "react";
 
 export const AppContext = createContext(null);
 
@@ -35,7 +30,6 @@ export const AppContextProvider = ({ children }: Props) => {
         id: doc.id,
       }));
       setUsers(newData);
-      // console.log(newData);
     });
   }
 
@@ -46,8 +40,6 @@ export const AppContextProvider = ({ children }: Props) => {
         id: doc.id,
       }));
       setPosts(newData);
-
-      console.log(newData);
     });
   }
 
@@ -58,6 +50,7 @@ export const AppContextProvider = ({ children }: Props) => {
     fetchUserDatabase,
     fetchPostsDatabase,
     currentUser,
+    setPosts,
   };
 
   return (

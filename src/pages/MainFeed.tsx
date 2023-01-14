@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ActiveBar from "../components/ActiveBar";
 import HeadsUp from "../components/HeadsUp";
 import NavBar from "../components/NavBar";
@@ -10,31 +10,36 @@ import NotificationOverlay from "../components/NotificationOverlay";
 import "./pages.css";
 import NewPost from "../components/NewPost";
 import { AppContext } from "../AppContext";
+import { v4 as uuidv4 } from "uuid";
 
 export default function MainFeed() {
   const currentContext: any = useContext(AppContext);
-  const { currentUser, users, posts, fetchUserDatabase, fetchPostsDatabase } =
+  const { currentUser, posts, fetchUserDatabase, fetchPostsDatabase } =
     currentContext;
 
-  function handleClick(): void {
+  const [sortedPosts, setSortedPosts] = useState<any>();
+
+  function fetchFromDatabase(): void {
     fetchPostsDatabase();
     fetchUserDatabase();
-    // console.log(users);
   }
 
   useEffect(() => {
-    handleClick();
+    fetchFromDatabase();
   }, []);
 
-  // ** Unimplemented
-  interface NotstaUser {
-    email: string;
-    first_name: string;
-    id: string;
-    last_name: string;
-    profile_pic: string;
-    user_id: string;
-  }
+  useEffect(() => {
+    console.log(
+      posts?.sort(
+        (a: any, b: any) => a.time_posted.seconds - b.time_posted.seconds
+      )
+    );
+    setSortedPosts(
+      posts?.sort(
+        (a: any, b: any) => b.time_posted.seconds - a.time_posted.seconds
+      )
+    );
+  }, [posts]);
 
   interface NotstaPost {
     comment: string;
@@ -59,9 +64,8 @@ export default function MainFeed() {
       <NewPost />
 
       <div className="main-feed-container">
-        {/* <button onClick={handleClick}>Test</button> */}
         <ActiveBar />
-        {posts?.map((x: NotstaPost) => (
+        {sortedPosts?.map((x: NotstaPost) => (
           <PostCard
             profilePic="https://picsum.photos/25"
             user={x.poster}
@@ -69,6 +73,7 @@ export default function MainFeed() {
             likeCount={5}
             caption={x.comment}
             time_posted={x.time_posted.seconds}
+            key={uuidv4()}
           />
         ))}
       </div>
