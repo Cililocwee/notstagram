@@ -282,6 +282,31 @@
   margin: auto 15px;
 }
 
+.comment-expand {
+  margin-left: 15px;
+  /* font-size: 1em; */
+  color: darkgray;
+  cursor: pointer;
+}
+
+.comment-frame {
+  margin: 0 15px;
+  font-size: 0.8em;
+  /* display: none; */
+}
+
+.comment-substance {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.comment-frame p {
+  margin: 0;
+}
+
 /** ACTIVE BAR **/
 
 #active-bar {

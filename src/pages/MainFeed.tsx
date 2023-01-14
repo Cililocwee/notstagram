@@ -37,11 +37,12 @@ export default function MainFeed() {
   }, [posts]);
 
   interface NotstaPost {
-    comment: string;
+    caption: string;
     id: string;
     pic_url: string;
     poster: string;
     time_posted: TimePosted;
+    comments: string[];
   }
 
   interface TimePosted {
@@ -66,9 +67,10 @@ export default function MainFeed() {
             user={x.poster}
             picUrl={x.pic_url}
             likeCount={5}
-            caption={x.comment}
+            caption={x.caption}
             time_posted={x.time_posted.seconds}
             key={uuidv4()}
+            comments={x.comments}
           />
         ))}
       </div>
