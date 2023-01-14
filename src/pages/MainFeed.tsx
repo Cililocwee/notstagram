@@ -29,11 +29,6 @@ export default function MainFeed() {
   }, []);
 
   useEffect(() => {
-    console.log(
-      posts?.sort(
-        (a: any, b: any) => a.time_posted.seconds - b.time_posted.seconds
-      )
-    );
     setSortedPosts(
       posts?.sort(
         (a: any, b: any) => b.time_posted.seconds - a.time_posted.seconds

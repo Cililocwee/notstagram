@@ -67,6 +67,17 @@
   margin-top: 15px;
 }
 
+.explore-page-container img {
+  object-fit: cover;
+}
+
+.explore-page-container img:hover {
+  scale: 1.05;
+  border: 3px solid darkgray;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
 /* When screen is smaller than 675 */
 @media only screen and (max-width: 675px) {
 }

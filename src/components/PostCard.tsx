@@ -54,11 +54,13 @@ export default function PostCard({
       </div>
       {/* This needs to eventually be its own component function */}
       <div className="caption">
-        <p className="caption-username">
-          <strong>{user}</strong>
+        <p className="caption-content">
+          <strong>{user}&nbsp;</strong>
+          {caption}
         </p>
-        <p className="caption-content">{caption}</p>
-        <p>{makeDateReadable(time_posted)}</p>
+      </div>
+      <div className="postcard-date">
+        <p>Posted on {makeDateReadable(time_posted)}</p>
       </div>
     </div>
   );

@@ -1,15 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../AppContext";
 import UserBubble from "./UserBubble";
+import { uuidv4 } from "@firebase/util";
 
 export default function ActiveBar() {
+  const currentContext: any = useContext(AppContext);
+  const { users } = currentContext;
+
+  interface UserIndividual {
+    email: string;
+    first_name: string;
+    last_name: string;
+    profile_pic: string;
+    user_id: string;
+  }
+
   return (
     <div id="active-bar">
-      <UserBubble userName="james_jim" picUrl="https://picsum.photos/75" />
-      <UserBubble userName="sarah_sara" picUrl="https://picsum.photos/76" />
-      <UserBubble userName="john_jack" picUrl="https://picsum.photos/77" />
-      <UserBubble userName="lee_leigh" picUrl="https://picsum.photos/78" />
-      <UserBubble userName="thanh_nguyen" picUrl="https://picsum.photos/79" />
-      <UserBubble userName="allison_y" picUrl="https://picsum.photos/80" />
+      {users?.map(
+        (user: UserIndividual, index: number) =>
+          index < 6 && (
+            <UserBubble
+              userName={user.user_id}
+              picUrl={user.profile_pic}
+              key={uuidv4()}
+            />
+          )
+      )}
     </div>
   );
 }
