@@ -43,6 +43,7 @@ export default function MainFeed() {
     poster: string;
     time_posted: TimePosted;
     comments: string[];
+    profile_pic: string;
   }
 
   interface TimePosted {
@@ -63,7 +64,7 @@ export default function MainFeed() {
         <ActiveBar />
         {sortedPosts?.map((x: NotstaPost) => (
           <PostCard
-            profilePic="https://picsum.photos/25"
+            profilePic={x.profile_pic}
             user={x.poster}
             picUrl={x.pic_url}
             likeCount={5}
