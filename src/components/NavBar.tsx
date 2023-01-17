@@ -60,12 +60,12 @@ export default function NavBar() {
     <div id="navbar">
       <div className="insta-home-div">
         <div id="insta-when-big">
-          <a className="hidden-when-small" href="/#/feed">
+          <a href="/#/feed">
             <p>Notstagram</p>
           </a>
         </div>
         <div id="insta-when-small">
-          <a className="hidden-when-small" href="/#/feed">
+          <a href="/#/feed">
             <img src={InstaBtn} />
             <p className="navbar-label">Label</p>
           </a>
@@ -76,7 +76,7 @@ export default function NavBar() {
         <img src={HomeBtn} />
         <p className="navbar-label">Home</p>
       </a>
-      <a className="hidden-when-small" onClick={openSearch}>
+      <a onClick={openSearch}>
         <img src={SearchBtn} />
         <p className="navbar-label">Search</p>
       </a>
@@ -84,12 +84,12 @@ export default function NavBar() {
         <img src={DiscoverBtn} />
         <p className="navbar-label">Explore</p>
       </Link>
-      <Link to="/feed">
+      <Link to="">
         {/* <Link to="/reels"> */}
         <img src={ReelBtn} />
         <p className="navbar-label">Reels</p>
       </Link>
-      <Link to="/feed">
+      <Link to="">
         {/* <Link to="/inbox"> */}
         <img src={ShareBtn} />
         <p className="navbar-label">Messages</p>

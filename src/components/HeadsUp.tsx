@@ -41,17 +41,17 @@ export default function HeadsUp({
         userName="timmy_tomas"
         suggestionHighlight="Suggested for you"
         picUrl="https://picsum.photos/51"
-      />{" "}
+      />
       <SuggestionBubble
         userName="lillylol"
         suggestionHighlight="Suggested for you"
         picUrl="https://picsum.photos/52"
-      />{" "}
+      />
       <SuggestionBubble
         userName="pasa_the_cat"
         suggestionHighlight="Suggested for you"
         picUrl="https://picsum.photos/53"
-      />{" "}
+      />
       <SuggestionBubble
         userName="juno_black_cat"
         suggestionHighlight="Suggested for you"

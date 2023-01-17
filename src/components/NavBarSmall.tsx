@@ -6,6 +6,7 @@ import NewBtn from "../assets/newgrad.png";
 import ReelBtn from "../assets/reelgrad.png";
 import ShareBtn from "../assets/sharegrad.png";
 import { AppContext } from "../AppContext";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   const currentContext: any = useContext(AppContext);
@@ -22,30 +23,27 @@ export default function NavBar() {
     <div id="navbar-small-screen">
       <a href="/#/feed">
         <img src={HomeBtn} />
-        <p className="navbar-label">Home</p>
       </a>
 
-      <a>
+      <Link to="/explore">
         <img src={DiscoverBtn} />
-        <p className="navbar-label">Explore</p>
-      </a>
-      <a>
+      </Link>
+
+      <Link to="">
         <img src={ReelBtn} />
-        <p className="navbar-label">Reels</p>
-      </a>
-      <a>
+      </Link>
+
+      <Link to="">
         <img src={ShareBtn} />
-        <p className="navbar-label">Messages</p>
-      </a>
+      </Link>
 
       <a onClick={popUp}>
         <img src={NewBtn} />
-        <p className="navbar-label">Create</p>
       </a>
-      <a>
+
+      <div id="profile-picture-small">
         <img className="profile-picture-small" src={currentUser.pic_url} />
-        <p className="navbar-label">Profile</p>
-      </a>
+      </div>
     </div>
   );
 }
