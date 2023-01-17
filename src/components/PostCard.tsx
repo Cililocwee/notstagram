@@ -69,7 +69,7 @@ export default function PostCard({
 
       <div className="comment-frame">
         <div className="comment-expand" onClick={handleClick}>
-          View all {comments?.length} comments
+          {comments && `View all ${comments.length} comments`}
         </div>
         <div className="comment-substance">
           {comments?.map((comment: string) => (
