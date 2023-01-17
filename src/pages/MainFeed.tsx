@@ -45,6 +45,7 @@ export default function MainFeed() {
     comments: string[];
     profile_pic: string;
     likes: number;
+    full_name: string;
   }
 
   interface TimePosted {
@@ -73,6 +74,7 @@ export default function MainFeed() {
             time_posted={x.time_posted.seconds}
             key={uuidv4()}
             comments={x.comments}
+            full_name={x.full_name}
           />
         ))}
       </div>

@@ -16,6 +16,7 @@ interface Props {
   caption: string;
   time_posted?: number | undefined;
   comments?: string[];
+  full_name?: string;
 }
 
 export default function PostCard({
@@ -26,6 +27,7 @@ export default function PostCard({
   caption,
   time_posted,
   comments,
+  full_name,
 }: Props): JSX.Element {
   function makeDateReadable(time: any): string {
     const stepOne = new Date(time * 1000);
@@ -38,7 +40,11 @@ export default function PostCard({
 
   return (
     <div className="postcard">
-      <PostCardLabel profilePic={profilePic} user={user} />
+      <PostCardLabel
+        profilePic={profilePic}
+        user={user}
+        full_name={full_name}
+      />
 
       <div className="centerpiece-photo">
         <img loading="lazy" src={picUrl} alt="" />
