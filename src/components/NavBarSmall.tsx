@@ -41,9 +41,9 @@ export default function NavBar() {
         <img src={NewBtn} />
       </a>
 
-      <Link to="">
+      <div id="profile-picture-small">
         <img className="profile-picture-small" src={currentUser.pic_url} />
-      </Link>
+      </div>
     </div>
   );
 }

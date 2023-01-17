@@ -12,9 +12,10 @@ export const AppContextProvider = ({ children }: Props) => {
   const [users, setUsers] = useState<any>();
   const [posts, setPosts] = useState<any>();
   const [currentUser, setCurrentUser] = useState<CurrentUser>({
-    username: "dev_user",
-    pic_url: "https://picsum.photos/25",
-    full_name: "Devon Userton",
+    username: "developer_sample",
+    pic_url:
+      "https://firebasestorage.googleapis.com/v0/b/notstagram-fcf48.appspot.com/o/profile_pictures%2Ffeey-kXXi6oxQ6bo-unsplash.jpg?alt=media&token=37908f3f-f929-4858-a5f3-036489fba064",
+    full_name: "Dev Eloper",
   });
 
   interface CurrentUser {
