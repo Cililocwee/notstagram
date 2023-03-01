@@ -1,16 +1,17 @@
-import React, { useContext, useEffect, useState } from "react";
+import { lazy, Suspense } from "react";
+import { useContext, useEffect, useState } from "react";
 import ActiveBar from "../components/ActiveBar";
 import HeadsUp from "../components/HeadsUp";
 import NavBar from "../components/NavBar";
 import NavBarSmall from "../components/NavBarSmall";
-import PostCard from "../components/PostCard";
 import SearchBar from "../components/SearchBar";
 import SearchOverlay from "../components/SearchOverlay";
 import NotificationOverlay from "../components/NotificationOverlay";
-import "./pages.css";
 import NewPost from "../components/NewPost";
 import { AppContext } from "../AppContext";
 import { v4 as uuidv4 } from "uuid";
+import "./pages.css";
+const PostCard = lazy(() => import("../components/PostCard"));
 
 export default function MainFeed() {
   const currentContext: any = useContext(AppContext);
@@ -54,36 +55,38 @@ export default function MainFeed() {
   }
 
   return (
-    <div id="main-feed">
-      <NavBar />
-      <NavBarSmall />
-      <SearchBar />
-      <SearchOverlay />
-      <NotificationOverlay />
-      <NewPost />
+    <Suspense fallback={<div>Loading...</div>}>
+      <div id="main-feed">
+        <NavBar />
+        <NavBarSmall />
+        <SearchBar />
+        <SearchOverlay />
+        <NotificationOverlay />
+        <NewPost />
 
-      <div className="main-feed-container">
-        <ActiveBar />
-        {sortedPosts?.map((x: NotstaPost) => (
-          <PostCard
-            profilePic={x.profile_pic}
-            user={x.poster}
-            picUrl={x.pic_url}
-            likeCount={x.likes}
-            caption={x.caption}
-            time_posted={x.time_posted.seconds}
-            key={uuidv4()}
-            comments={x.comments}
-            full_name={x.full_name}
-          />
-        ))}
+        <div className="main-feed-container">
+          <ActiveBar />
+          {sortedPosts?.map((x: NotstaPost) => (
+            <PostCard
+              profilePic={x.profile_pic}
+              user={x.poster}
+              picUrl={x.pic_url}
+              likeCount={x.likes}
+              caption={x.caption}
+              time_posted={x.time_posted.seconds}
+              key={uuidv4()}
+              comments={x.comments}
+              full_name={x.full_name}
+            />
+          ))}
+        </div>
+
+        <HeadsUp
+          userName={currentUser.username}
+          fullName={currentUser.full_name}
+          pic_url={currentUser.pic_url}
+        />
       </div>
-
-      <HeadsUp
-        userName={currentUser.username}
-        fullName={currentUser.full_name}
-        pic_url={currentUser.pic_url}
-      />
-    </div>
+    </Suspense>
   );
 }
