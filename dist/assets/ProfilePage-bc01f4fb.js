@@ -1,0 +1,1 @@
+import{j as r,a}from"./index-887bf118.js";import{N as e,a as s,S as i,b as o,c as t,d as n}from"./NewPost-e7c25617.js";function l(){return r("div",{id:"profile-page",children:[a(e,{}),a(s,{}),a(i,{}),a(o,{}),a(t,{}),a(n,{}),a("p",{className:"in-progress",children:"This feature is not yet functional"})]})}export{l as default};
