@@ -60,19 +60,19 @@ export default function NavBar() {
     <div id="navbar">
       <div className="insta-home-div">
         <div id="insta-when-big">
-          <a href="/#/feed">
+          <a href="/">
             <p>Notstagram</p>
           </a>
         </div>
         <div id="insta-when-small">
-          <a href="/#/feed">
+          <a href="/">
             <img src={InstaBtn} />
             <p className="navbar-label">Label</p>
           </a>
         </div>
       </div>
 
-      <a href="/#/feed">
+      <a href="/">
         <img src={HomeBtn} />
         <p className="navbar-label">Home</p>
       </a>
@@ -85,12 +85,10 @@ export default function NavBar() {
         <p className="navbar-label">Explore</p>
       </Link>
       <Link to="">
-        {/* <Link to="/reels"> */}
         <img src={ReelBtn} />
         <p className="navbar-label">Reels</p>
       </Link>
       <Link to="">
-        {/* <Link to="/inbox"> */}
         <img src={ShareBtn} />
         <p className="navbar-label">Messages</p>
       </Link>
@@ -104,8 +102,7 @@ export default function NavBar() {
         <img src={NewBtn} />
         <p className="navbar-label">Create</p>
       </a>
-      <Link to="/feed">
-        {/* <Link to="/profile"> */}
+      <Link to="/">
         <img className="profile-picture-small" src={currentUser.pic_url} />
         <p className="navbar-label">Profile</p>
       </Link>

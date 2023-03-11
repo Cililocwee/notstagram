@@ -21,7 +21,7 @@ export default function NavBar() {
   }
   return (
     <div id="navbar-small-screen">
-      <a href="/#/feed">
+      <a href="/">
         <img src={HomeBtn} />
       </a>
 

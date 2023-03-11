@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
-const LogIn = lazy(() => import("./pages/LogIn"));
 const MainFeed = lazy(() => import("./pages/MainFeed"));
 const Inbox = lazy(() => import("./pages/Inbox"));
 const ProfilePage = lazy(() => import("./pages/ProfilePage"));
@@ -14,12 +13,13 @@ function App() {
     <div className="App">
       <Suspense fallback="Loading...">
         <Routes>
-          <Route path="/" element={<LogIn />} />
-          <Route path="/feed" element={<MainFeed />} />
+          <Route path="/" element={<MainFeed />} />
+          {/* <Route path="/feed" element={<MainFeed />} /> */}
           <Route path="/inbox" element={<Inbox />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/reels" element={<ReelsPage />} />
           <Route path="/explore" element={<ExplorePage />} />
+          <Route path="/*" element={<div>404: Page not found</div>} />
         </Routes>
       </Suspense>
     </div>

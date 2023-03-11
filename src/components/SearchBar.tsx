@@ -4,7 +4,7 @@ import Heart from "../assets/heart.png";
 export default function SearchBar() {
   return (
     <div id="search-bar">
-      <Link to="/feed">
+      <Link to="/">
         <p>Notstagram</p>
       </Link>
       <div id="search-bar-right">
