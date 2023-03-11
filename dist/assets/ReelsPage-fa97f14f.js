@@ -1,0 +1,1 @@
+import{j as e,a}from"./index-90082eb9.js";import{N as s,a as r,S as i,b as t,c as o,d as n}from"./NewPost-624c1a18.js";function f(){return e("div",{id:"reels-page",children:[a(s,{}),a(r,{}),a(i,{}),a(t,{}),a(o,{}),a(n,{}),a("p",{className:"in-progress",children:"This feature is not yet functional"})]})}export{f as default};
