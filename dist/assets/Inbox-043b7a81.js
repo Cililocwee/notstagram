@@ -1,1 +1,0 @@
-import{j as r,a}from"./index-711e07a8.js";import{N as s,a as e,S as i,b as o,c as t,d as n}from"./NewPost-95d54379.js";function l(){return r("div",{id:"inbox",children:[a(s,{}),a(e,{}),a(i,{}),a(o,{}),a(t,{}),a(n,{}),a("p",{className:"in-progress",children:"This feature is not yet functional"})]})}export{l as default};
