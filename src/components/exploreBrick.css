@@ -33,7 +33,8 @@
 /* When screen is bigger than 1050 */
 @media only screen and (min-width: 1050px) {
   .explore-page-container {
-    margin-left: 14em;
+    padding-left: 14em;
+    width: auto;
   }
 }
 

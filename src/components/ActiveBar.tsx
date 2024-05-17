@@ -19,7 +19,7 @@ export default function ActiveBar() {
     <div id="active-bar">
       {users?.map(
         (user: UserIndividual, index: number) =>
-          index < 6 && (
+          index < 5 && (
             <UserBubble
               userName={user.user_id}
               picUrl={user.profile_pic}

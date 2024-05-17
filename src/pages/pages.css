@@ -14,15 +14,8 @@
 #inbox,
 #reels-page {
   display: flex;
-}
-
-@media only screen and (max-width: 1000px) {
-  #main-feed,
-  #reels-page,
-  #inbox,
-  #profile-page {
-    grid-template-columns: 1fr 500px 1fr;
-  }
+  width: 100%;
+  height: 100%;
 }
 
 /** LOG IN **/
@@ -30,6 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 
 .login-container {
@@ -48,17 +42,10 @@
   align-items: center;
   gap: 15px;
   width: 95%;
-}
-
-@media only screen and (max-width: 675px) {
-  .main-feed-container {
-    grid-template-columns: 500px;
-    margin: 60px auto auto auto;
-  }
+  margin: 0 auto;
 }
 
 /** EXPLORE **/
-
 #explore-page {
   position: relative;
   width: 100%;
@@ -71,6 +58,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 15px;
+  width: 100%;
 }
 
 .explore-page-container button {
@@ -79,20 +67,35 @@
 
 .explore-page-container img {
   object-fit: cover;
+  max-width: 100%;
+  height: auto;
 }
 
 .explore-page-container img:hover {
-  scale: 1.05;
+  transform: scale(1.05);
   border: 3px solid darkgray;
   box-sizing: border-box;
   cursor: pointer;
   z-index: 10;
 }
 
-/* When screen is smaller than 675 */
-@media only screen and (max-width: 675px) {
+/** MEDIA QUERIES **/
+@media (max-width: 1000px) {
+  .main-feed-container {
+    width: 100%;
+  }
 }
 
-/* When screen is bigger than 675 */
-@media only screen and (min-width: 675px) {
+@media (max-width: 675px) {
+  #main-feed,
+  #reels-page,
+  #inbox,
+  #profile-page {
+    grid-template-columns: 1fr;
+  }
+
+  .main-feed-container {
+    width: 100%;
+    margin-top: 4em;
+  }
 }
